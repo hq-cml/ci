@@ -22,6 +22,7 @@ class News extends CI_Controller{
         $data['news_item'] = $this->news_model->get_news($slug);
         if (empty($data['news_item']))
         {
+            echo $slug;
             show_404();
         }
 
