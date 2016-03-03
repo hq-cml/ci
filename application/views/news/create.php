@@ -2,7 +2,7 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('news/create'); ?>
+<?php echo form_open('http://192.168.221.128:8081/index.php/news/create'); ?>
 
 <label for="title">Title</label>
 <input type="input" name="title" /><br />
