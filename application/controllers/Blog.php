@@ -16,7 +16,8 @@ class Blog extends CI_Controller {
     }
     public function index()
     {
-        echo 'Hello World!';
+        //加载并显示页面blogview
+        $this->load->view('blogview');
     }
 
     //测试参数传入
