@@ -7,7 +7,13 @@
  * Time: 8:27 AM
  */
 class Blog extends CI_Controller {
-
+    //如果打算在控制器中使用构造函数,必须先调用父类构造函数
+    //原因是构造函数将会覆盖父类的构造函数，所以要手工的调用它
+    public function __construct()
+    {
+        parent::__construct();
+        // Your own constructor code
+    }
     public function index()
     {
         echo 'Hello World!';
