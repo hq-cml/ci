@@ -16,8 +16,10 @@ class Blog extends CI_Controller {
     }
     public function index()
     {
+        //向页面添加动态数据
+        $data['todo_list'] = array('hello', 'world', '!');
         //加载并显示页面blogview
-        $this->load->view('blogview');
+        $this->load->view('blogview', $data);
     }
 
     //测试参数传入
