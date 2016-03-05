@@ -30,6 +30,7 @@ class Blog extends CI_Controller {
         echo $p2;
     }
 
+    /*
     //自定义路由规则，重写默认的使用URI中的分段来决定调用哪个方法这种行为
     public function _remap($method)
     {
@@ -42,5 +43,23 @@ class Blog extends CI_Controller {
             //如果调用一个随便不存在的方法，则一律调用index，而不再是404
             $this->index();
         }
+    }
+    */
+
+    public function blog()
+    {
+        $this->load->model('blog_model','',TRUE);
+
+        $data['query'] = $this->blog_model->get_last_ten_entries();
+        print_r($data);
+        //$this->load->view('blog', $data);
+    }
+
+    public function blog_insert()
+    {
+        $this->load->model('blog_model', '', TRUE);
+
+        $result = $this->blog_model->insert_entry();
+        var_dump($result);
     }
 }

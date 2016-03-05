@@ -20,17 +20,17 @@ class Blog_model extends CI_Model {
 
     public function get_last_ten_entries()
     {
-        $query = $this->db->get('entries', 10);
+        $query = $this->db->get('blog', 10);
         return $query->result();
     }
 
     public function insert_entry()
     {
-        $this->title    = $_POST['title']; // please read the below note
-        $this->content  = $_POST['content'];
+        $this->title    = $_REQUEST['title']; // please read the below note
+        $this->content  = $_REQUEST['content'];
         $this->date = time();
 
-        $this->db->insert('entries', $this);
+        $this->db->insert('blog', $this);
     }
 
     public function update_entry()
@@ -39,7 +39,7 @@ class Blog_model extends CI_Model {
         $this->content  = $_POST['content'];
         $this->date = time();
 
-        $this->db->update('entries', $this, array('id' => $_POST['id']));
+        $this->db->update('blog', $this, array('id' => $_POST['id']));
     }
 
 }
