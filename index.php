@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set("PRC");
+
 /**
  * CodeIgniter
  *
@@ -290,3 +292,5 @@ switch (ENVIRONMENT)
  * And away we go...
  */
 require_once BASEPATH.'core/CodeIgniter.php';
+
+

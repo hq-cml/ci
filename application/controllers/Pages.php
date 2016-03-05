@@ -30,4 +30,8 @@ class Pages extends CI_Controller {
     public function my_show_error(){
         show_error('Test something wrong', 500, 'HAHA');
     }
+
+    public function my_log_message(){
+        log_message('error', 'Some error.');
+    }
 }
