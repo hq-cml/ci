@@ -26,4 +26,8 @@ class Pages extends CI_Controller {
     public function my_404(){
         set_status_header(404, "my not found!");
     }
+
+    public function my_show_error(){
+        show_error('Test something wrong', 500, 'HAHA');
+    }
 }
