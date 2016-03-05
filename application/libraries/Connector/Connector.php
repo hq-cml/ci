@@ -9,7 +9,7 @@ class Connector extends CI_Driver_Library
     function __construct()
     {
         $this->CI = &get_instance();
-        $this->valid_drivers = array('connector_twitter', 'connector_facebook');
+        $this->valid_drivers = array('twitter', 'facebook');
     }
 
     public function get_friends()
