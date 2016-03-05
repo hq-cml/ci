@@ -22,4 +22,8 @@ class Pages extends CI_Controller {
         $this->load->view('pages/'.$page, $data);
         $this->load->view('templates/footer', $data);
     }
+
+    public function my_404(){
+        set_status_header(404, "my not found!");
+    }
 }
