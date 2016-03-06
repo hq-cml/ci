@@ -35,4 +35,17 @@ class Pages extends CI_Controller {
     public function my_log_message(){
         log_message('error', 'Some error.');
     }
+
+    //基准测试类
+    public function bench(){
+        $this->benchmark->mark('my_test_start');
+
+        // Some code happens here
+        sleep(2);
+
+        $this->benchmark->mark('my_test_end');
+
+        echo $this->benchmark->elapsed_time('my_test_start', 'my_test_end');
+        $this->output->enable_profiler(TRUE);
+    }
 }
