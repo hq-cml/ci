@@ -1,6 +1,7 @@
 <?php
 class Pages extends CI_Controller {
     public function index(){
+        $this->output->enable_profiler(TRUE);
         echo "hello world";
     }
 
